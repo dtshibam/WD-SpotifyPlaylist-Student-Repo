@@ -79,8 +79,7 @@ What is an event?  Why "change" instead of "click"?
 Show students: the page reacts when the user does something */
 
  selector.addEventListener("change", function () {
-
-   /*  STEP 3: Getting the Selected Mood
+ /*  STEP 3: Getting the Selected Mood
  console.log(selector.value) to show the mood
  Explain: playlistData[mood] vs playlistData.focus
  This is dynamic property access! */
@@ -100,18 +99,37 @@ Show students: the page reacts when the user does something */
 //WE DO STEP ==> Instructor and students will complete steps 5-6 live together.
 
 // STEP 5: Clearing Previous Playlist
-
+container.innerHTML = ":
 // STEP 6: Conditional Feedback
-
+if (mood === "focus") {
+  feedback.innertext = "Lock in!';
+} else if (mood === "chill") {
+  feedback.innerText = "Time to relax!";
+} else if (mood === hype) {
+  feeback.innerText = "Lets goooo!";
+} else {
+  feeback.innertext = "Select a mood.";
+}
 
 // STOP. DEV TEAMS BEGIN HERE.
 
 // STEP 7: The Loop (⭐⭐⭐ MOST IMPORTANT!)
+if (songs) {
+  for (let i = 0; i <songs.lenght; i++) {
+    const song = songs (i)
 
+    cinst row = document.createElement("div");
+    row.className = "song-row";
+
+    const img = document.createElement("img");
+    img.src = song.cover;
+ img.onerror = function() {
+    this.src = "https://placehold.co/60x60?text=Music";
+  };  
+  
+}
 
 // STEP 8: Create and Display DOM Elements
-
-
  
 
  });
@@ -119,6 +137,4 @@ Show students: the page reacts when the user does something */
  
 
 //  BONUS: Image Fallback Protection
- img.onerror = function() {
-    this.src = "https://placehold.co/60x60?text=Music";
-  };
+
