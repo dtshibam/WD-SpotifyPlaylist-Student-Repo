@@ -126,7 +126,14 @@ if (songs) {
  img.onerror = function() {
     this.src = "https://placehold.co/60x60?text=Music";
   };  
-  
+  const title = document.createElement("div")
+    title.innerText = song.tittle;
+
+    row.appendChild(img);
+    row.appendChild(title);
+
+    container.appendChild(row);
+  }
 }
 
 // STEP 8: Create and Display DOM Elements
